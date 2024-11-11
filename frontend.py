@@ -26,7 +26,7 @@ def login_screen():
     if st.button("Login"):
         if username and password:
             st.session_state.logged_in = True
-            #st.session_state.gh_token = gh_token
+            st.session_state.gh_token = st.secrets["gh_token"]
             st.rerun()
 
 
