@@ -21,12 +21,12 @@ def login_screen():
 
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
-    gh_token = st.text_input("GitHub API Key")
+    #gh_token = st.text_input("GitHub API Key")
 
     if st.button("Login"):
-        if username and password and gh_token:
+        if username and password:
             st.session_state.logged_in = True
-            st.session_state.gh_token = gh_token
+            #st.session_state.gh_token = gh_token
             st.rerun()
 
 
